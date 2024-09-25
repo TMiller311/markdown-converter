@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event'
 import App from './App';
 
@@ -44,7 +44,7 @@ test("the clear button should clear input", () => {
   expect(markdownTextEntryElement).toHaveValue('');
 });
 
-test("the convert button should convert input", async () => {
+test("the convert button should convert input", () => {
   const {rerender} = render(<App />);
   const markdownTextEntryElement = screen.getByTestId('markdown-entry-text-field-input');
   expect(markdownTextEntryElement).not.toBeNull();

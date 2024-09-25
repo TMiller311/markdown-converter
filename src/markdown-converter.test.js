@@ -1,4 +1,4 @@
-import { convertToHTML, containsMarkdown } from './markdown-converter';
+import { convertToHTML } from './markdown-converter';
 
 test('convertToHTML should convert markdown text to HTML - headers', () => {
     let markdownText = '# Heading 1';
